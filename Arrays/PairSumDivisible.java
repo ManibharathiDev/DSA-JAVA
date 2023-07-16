@@ -10,7 +10,7 @@ class PairSumDivisible{
             int B = 37;
             System.out.println(solve(A, B));
         }
-
+        //ans += ((long)hm. get(i) * hm. get(B-i));
         public static int solve(int[] A, int B) {
             //HashMap
             int mods = 1000000007;
