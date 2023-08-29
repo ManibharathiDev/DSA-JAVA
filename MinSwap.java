@@ -94,3 +94,42 @@ public class MinSwap {
         System.out.println(swap);
     }
 }
+
+/**
+ * Solution
+ 
+ public int solve(int[] A, int B) {
+    int n = A.length;
+    int windowSize = 0;
+       
+        for(int i = 0; i < n; i++){
+            if(A[i] <= B){
+                windowSize++;
+            }
+        }
+        int start = 0;
+        int end = windowSize - 1;
+        int minSwap = Integer.MAX_VALUE;
+        int greaterThanB = 0;
+        for(int i = start; i <= end; i++){
+            if(A[i] > B)
+                greaterThanB++;
+        }
+        minSwap = greaterThanB;
+        start = 1;
+        end = windowSize;
+       
+        while(end < n){
+            if(A[start-1] > B)
+                greaterThanB--;
+            if(A[end] > B)
+                greaterThanB++;
+            minSwap = Math.min(greaterThanB, minSwap);
+            start++;
+            end++;
+        }
+        return minSwap;
+    }
+
+
+ */
